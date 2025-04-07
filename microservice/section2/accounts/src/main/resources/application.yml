@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: accounts
+
   datasource:
     url: jdbc:postgresql://localhost:5432/module_accounts
     driver-class-name: org.postgresql.Driver
@@ -13,3 +16,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+
+
