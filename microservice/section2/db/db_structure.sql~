@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS customers (
+CREATE TABLE IF NOT EXISTS customer (
   customer_id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL,
@@ -18,5 +18,5 @@ CREATE TABLE IF NOT EXISTS accounts (
   created_by VARCHAR(20) NOT NULL,
   updated_at DATE DEFAULT NULL,
   updated_by VARCHAR(20) DEFAULT NULL,
-  CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+  CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
 );
