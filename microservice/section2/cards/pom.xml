@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eazybytes</groupId>
-	<artifactId>accounts</artifactId>
+	<artifactId>cards</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>accounts</name>
-	<description>Microservice for Accounts</description>
+	<name>cards</name>
+	<description>Microservice for Cards</description>
 	<url/>
 	<licenses>
 		<license/>
