@@ -28,12 +28,6 @@ public interface IAccountService {
      */
     boolean updateAccount(CustomerDto customerDto);
 
-    /**
-     * Delete account boolean.
-     *
-     * @param mobileNumber the mobile number
-     * @return the boolean
-     */
     boolean deleteAccount(String mobileNumber);
 
 }
