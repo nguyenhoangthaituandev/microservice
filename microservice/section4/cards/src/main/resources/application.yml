@@ -3,16 +3,18 @@ server:
 
 spring:
   application:
-    name: cards
-
+    name: accounts
   datasource:
-    url: jdbc:postgresql://localhost:5432/module_accounts
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASS}
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: root
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
+
+
+
