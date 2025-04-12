@@ -1,7 +1,7 @@
 services:
   accounts:
     build:
-      context: Dockerfile
+      context: ./accounts
     image: "nguyenhoangthaituandev/accounts:s4"
     container_name: accounts-ms
     ports:
@@ -19,7 +19,7 @@ services:
 
   loans:
     build:
-      context: Dockerfile
+      context: ./loans
     image: "nguyenhoangthaituandev/loans:s4"
     container_name: loans-ms
     ports:
@@ -37,7 +37,7 @@ services:
 
   cards:
     build:
-      context: Dockerfile
+      context: ./cards
     image: "nguyenhoangthaituandev/cards:s4"
     container_name: cards-ms
     ports:
