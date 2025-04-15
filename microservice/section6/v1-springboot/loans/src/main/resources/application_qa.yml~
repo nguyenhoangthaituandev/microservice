@@ -1,0 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: "loans"
+
+build:
+  version: "2.0"
+
+loans:
+  message: "Welcome to NguyenHoangThaiTuan loán related qa APIs "
+  contactDetails:
+    name: "John Doe - QA"
+    email: "john@eazybank.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345
+
+
+
