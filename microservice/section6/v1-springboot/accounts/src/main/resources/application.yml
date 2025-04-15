@@ -1,24 +1,29 @@
 server:
   port: 8080
 
-build:
-  version: "1.0"
-
 spring:
   application:
     name: accounts
-
   datasource:
     url: jdbc:postgresql://host.docker.internal:5432/module_accounts
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
-
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+      - "application_prod.yml"
+      - "application_qa.yml"
+  profiles:
+    active:
+      - "prod"
+
+build:
+  version: "3.0"
 
 accounts:
   message: "Welcome to NguyenHoangThaiTuan accounts related local APIs "
