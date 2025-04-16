@@ -1,0 +1,58 @@
+services:
+  accounts:
+    build:
+      context: ./accounts
+    image: "nguyenhoangthaituandev/accounts:s6"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/module_accounts
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+    deploy:
+      resources:
+        limits:
+          memory: 700M
+    networks:
+      - mynetwork
+
+  loans:
+    build:
+      context: ./loans
+    image: "nguyenhoangthaituandev/loans:s6"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/module_accounts
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+    deploy:
+      resources:
+        limits:
+          memory: 700M
+    networks:
+      - mynetwork
+
+  cards:
+    build:
+      context: ./cards
+    image: "nguyenhoangthaituandev/cards:s6"
+    container_name: cards-ms
+    ports:
+      - "9000:9000"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/module_accounts
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+    deploy:
+      resources:
+        limits:
+          memory: 700M
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: "bridge"
