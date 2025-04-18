@@ -11,7 +11,7 @@ spring:
           #search-locations: "classpath:/config"
           #search-locations: "file:D:/config"
         git:
-          uri: "https://github.com/nguyenhoangthaituandev/microservice-config.git"
+          uri: "git@github.com:nguyenhoangthaituandev/microservice.git"
           default-label: main
           timeout: 10000
           clone-on-start: true
