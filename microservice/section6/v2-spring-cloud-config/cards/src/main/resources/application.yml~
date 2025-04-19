@@ -1,9 +1,8 @@
 server:
-  port: 8080
-
+  port: 9000
 spring:
   application:
-    name: accounts
+    name: cards
   datasource:
     url: jdbc:postgresql://localhost:5432/module_accounts
     username: postgres
@@ -16,14 +15,3 @@ spring:
     show-sql: true
   config:
     import: "configserver:http://localhost:8071/"
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-
-
-
-

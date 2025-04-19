@@ -5,7 +5,7 @@ spring:
   application:
     name: loans
   datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/module_accounts
+    url: jdbc:postgresql://localhost:5432/module_accounts
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
@@ -16,3 +16,9 @@ spring:
     show-sql: true
   config:
     import: "configserver:http://localhost:8071/"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
